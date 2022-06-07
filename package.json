@@ -17,6 +17,7 @@
     "express": "^4.17.2",
     "liquidjs": "^9.25.1",
     "morgan": "^1.10.0",
+    "node": "^17.7.2",
     "postmark": "^2.8.1",
     "puppeteer": "^10.2.0",
     "user-agents": "^1.0.920"
