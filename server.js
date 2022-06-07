@@ -16,6 +16,7 @@ import dotenv from "dotenv";
 //const generatePdf=require(// from './pdf-generator/index.js';
 dotenv.config();
 const app = express();
+
 // create application/json parser
 var jsonParser = bodyParser.json({ limit: "50mb" });
 app.use(express.urlencoded({ extended: true }));
