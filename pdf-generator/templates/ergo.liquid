@@ -1,53 +1,53 @@
 <!DOCTYPE html>
-<head>
-<style>
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  }
-  
- .table{
-  margin-top: 1rem;
-  }
-  
- .tablecontainer{
-  padding: 20px;}
-  
- th{
- padding: 0 20px;
-    font-size: 22px;}
- td{
-    padding: 0 25px;
-}
-</style>
-</head>
-
-<body style="padding: 3rem">
- <div> 
-<div>  
- <h4 style="text-align: center">Your Designed Chair</h4>
-<img src={{data.thumbnail}} alt="Paris" class="center">
-<p style = "text-align: center">Total Price : $ {{data.Price}}</p>
-</div> 
+    <head>
+    <style>
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      }
+      
+     .table{
+      margin-top: 1rem;
+      }
+      
+     .tablecontainer{
+      padding: 20px;}
+      
+     th{
+     padding: 0 18px;
+        font-size: 18px;
+        padding-bottom: 5px;
+        }
+     td{
+        padding: 0 10px;
+    }
+    p{text-align: center;
+        font-weight:500;
+    }
+    h2{text-align: center}
+    </style>
+    </head>
     
-<div class="tablecontainer">   
-    <table class="table" style="align-items:center">
-        <th style="font-size: 10px">
-            <tr>
-                <th>Item</th>
-                <th>values</th>
-            </tr>
-        </th>
-        {% for item in data.valueTable %}
-            <tr>
-                <td>{{item.name}}</td>
-                <td>{{item.value}}</td>
-            </tr>
-        {% endfor %}
-    </table>
-     </div> 
-      </div> 
-</body>
-</html>
+    <body style="padding: 3rem">
+     <div> 
+    <div>  
+     <h2>{{data.ChairType}}</h2>
+    <img src={{data.thumbnail}} alt="Paris" class="center">
+    <p>Total Price : $ {{data.Price}}</p>
+    </div> 
+        
+    <div class="tablecontainer">   
+        <table class="table">
+            {% for item in data.valueTable %}
+                <tr>
+                    <td>  {{item.name}}</td>
+                    <td>    {{item.value}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+         </div> 
+          </div> 
+    </body>
+    </html>
