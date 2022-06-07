@@ -2,7 +2,6 @@ import generatePdf from './pdf-generator/index.js';
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import postmark from 'postmark';
 import morgan from 'morgan';
 import dotenv from "dotenv";
 
@@ -11,7 +10,6 @@ import dotenv from "dotenv";
 //const morgan = require("morgan");
 //const axios = require("axios").default;
 //const bodyParser=require("body-parser");
-//const postmark =require("postmark");
 //require("dotenv").config();
 //const generatePdf=require(// from './pdf-generator/index.js';
 dotenv.config();
@@ -19,8 +17,7 @@ const app = express();
 
 // const PORT = process.env.PORT || 80;
 const PORT = process.env.PORT || 3001;
-const SENDER_EMAIL = 'emuca@emuca.com';
-const client = new postmark.ServerClient(process.env.SERVER_TOKEN);
+
 //digitize Code
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
